@@ -1,1 +1,1 @@
-# workouts-generator
+# restaurant-site
