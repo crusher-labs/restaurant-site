@@ -17,7 +17,7 @@ const MenuPreview = React.forwardRef((props, ref) => {
       ref.current = node;
     }
   };
-  return <section ref={setRefs} className="py-24 bg-white">
+  return <section ref={setRefs} className="py-24 bg-card">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div initial={{
@@ -29,8 +29,10 @@ const MenuPreview = React.forwardRef((props, ref) => {
         } : {}} transition={{
           duration: 0.8
         }} className="order-2 md:order-1">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl">
-              <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Artistic plated dessert" src="https://horizons-cdn.hostinger.com/efb71b3a-2834-4462-96d3-39b1a9d0a298/nima-naseri-hxoqzxezzmi-unsplash-TOrf6.jpg" />
+            <div className="hear grid aspect-[4/3] place-items-center overflow-hidden rounded-lg border border-border">
+              <span className="font-display px-6 text-center text-4xl italic text-foreground/70 sm:text-5xl">
+                il menù
+              </span>
             </div>
           </motion.div>
 
@@ -44,16 +46,16 @@ const MenuPreview = React.forwardRef((props, ref) => {
           duration: 0.8,
           delay: 0.2
         }} className="order-1 md:order-2">
-            <span className="text-[#8B7355] text-sm tracking-[0.2em] uppercase mb-4 block">
+            <span className="text-primary text-sm tracking-[0.2em] uppercase mb-4 block">
               Our Menu
             </span>
-            <h2 className="text-4xl md:text-5xl font-light text-[#6B5D4F] mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 leading-tight">
               A Fresh and
               <br />
               Seasonal Cuisine
             </h2>
-            <p className="text-[#6B5D4F]/80 leading-relaxed mb-8">We serve only exceptional hand-picked ingredients, found fresh every morning at the local farmers' market.</p>
-            <Button onClick={() => navigate('/menu')} className="bg-[#8B7355] hover:bg-[#6B5D4F] text-white px-8">
+            <p className="text-foreground/80 leading-relaxed mb-8">We serve only exceptional hand-picked ingredients, found fresh every morning at the local farmers' market.</p>
+            <Button onClick={() => navigate('/menu')} className="bg-primary hover:bg-secondary text-foreground px-8">
               View Full Menu
             </Button>
           </motion.div>

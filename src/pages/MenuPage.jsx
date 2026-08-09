@@ -29,7 +29,7 @@ const MenuCategory = ({ title, items }) => (
     transition={{ duration: 0.6 }}
     className="mb-12"
   >
-    <h2 className="text-3xl md:text-4xl font-light text-center text-[#6B5D4F] mb-8 tracking-wider">{title}</h2>
+    <h2 className="text-3xl md:text-4xl font-light text-center text-foreground mb-8 tracking-wider">{title}</h2>
     <div className="space-y-6 max-w-2xl mx-auto">
       {items.map((item, index) => (
         <motion.div 
@@ -39,10 +39,10 @@ const MenuCategory = ({ title, items }) => (
           transition={{ duration: 0.5, delay: index * 0.1 }}
         >
           <div className="flex justify-between items-baseline">
-            <h3 className="text-xl font-normal text-[#3D352E]">{item.name}</h3>
-            <p className="text-xl font-light text-[#6B5D4F]">{item.price}</p>
+            <h3 className="text-xl font-normal text-foreground">{item.name}</h3>
+            <p className="text-xl font-light text-foreground">{item.price}</p>
           </div>
-          <p className="text-[#6B5D4F]/80 mt-1">{item.description}</p>
+          <p className="text-foreground/80 mt-1">{item.description}</p>
         </motion.div>
       ))}
     </div>
@@ -53,15 +53,15 @@ const MenuPage = () => {
   return (
     <>
       <Helmet>
-        <title>Menu - Saint-Laurent Restaurant</title>
+        <title>Menu - San Lorenzo</title>
         <meta name="description" content="Explore the exquisite menu at Saint-Laurent, featuring a curated selection of starters, main courses, and desserts." />
       </Helmet>
-      <div className="bg-[#F5F1EB] pt-32 pb-24 px-6">
+      <div className="bg-background pt-32 pb-24 px-6">
         <motion.h1 
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl font-thin text-center text-[#3D352E] mb-16 tracking-widest"
+          className="text-5xl md:text-6xl font-thin text-center text-foreground mb-16 tracking-widest"
         >
           OUR MENU
         </motion.h1>

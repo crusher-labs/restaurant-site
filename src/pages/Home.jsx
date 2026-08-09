@@ -10,8 +10,8 @@ const Home = ({ refs }) => {
   return (
     <>
       <Helmet>
-        <title>Saint-Laurent Restaurant - Fine Dining Experience</title>
-        <meta name="description" content="Experience exceptional cuisine at Saint-Laurent Restaurant. Reserve your table today for an unforgettable dining experience." />
+        <title>San Lorenzo - Fine Dining Experience</title>
+        <meta name="description" content="Experience exceptional cuisine at San Lorenzo. Reserve your table today for an unforgettable dining experience." />
       </Helmet>
       <Hero />
       <AboutSection ref={refs.about} />

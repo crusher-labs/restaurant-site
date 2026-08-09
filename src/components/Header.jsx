@@ -81,7 +81,7 @@ const Header = ({ sectionRefs }) => {
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-          headerIsScrolled && !isMobileMenuOpen ? 'bg-[#F5F1EB]/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
+          headerIsScrolled && !isMobileMenuOpen ? 'bg-background/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -108,7 +108,7 @@ const Header = ({ sectionRefs }) => {
                   transition={{ delay: 0.1 * index }}
                   onClick={() => handleNavClick(item.toLowerCase())}
                   className={`text-sm transition-colors duration-300 ${
-                    headerIsScrolled ? 'text-[#000] hover:text-[#333]' : 'text-[#fff] hover:text-[#E8E0D5]'
+                    headerIsScrolled ? 'text-[#000] hover:text-[#333]' : 'text-[#fff] hover:text-muted-foreground'
                   }`}
                 >
                   {item}
@@ -152,7 +152,7 @@ const Header = ({ sectionRefs }) => {
                   animate="visible"
                   exit="exit"
                   onClick={() => handleNavClick(item.toLowerCase())}
-                  className="text-3xl font-light text-white/80 hover:text-white transition-colors duration-300"
+                  className="text-3xl font-light text-foreground/80 hover:text-foreground transition-colors duration-300"
                 >
                   {item}
                 </motion.button>

@@ -19,7 +19,7 @@ const AboutSection = React.forwardRef((props, ref) => {
       ref.current = node;
     }
   };
-  return <section ref={setRefs} className="py-24 bg-[#F5F1EB]">
+  return <section ref={setRefs} className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div initial={{
@@ -31,13 +31,13 @@ const AboutSection = React.forwardRef((props, ref) => {
         } : {}} transition={{
           duration: 0.8
         }}>
-            <span className="text-[#8B7355] text-sm tracking-[0.2em] uppercase mb-4 block">Est. 1961</span>
-            <h2 className="text-4xl md:text-5xl font-light text-[#6B5D4F] mb-6 leading-tight">
+            <span className="text-primary text-sm tracking-[0.2em] uppercase mb-4 block">Est. 1961</span>
+            <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 leading-tight">
               Honest, Simple,
               <br />
               Heartfelt, Delicious
             </h2>
-            <p className="text-[#6B5D4F]/80 leading-relaxed mb-8">
+            <p className="text-foreground/80 leading-relaxed mb-8">
               At Saint-Laurent, we believe that true culinary artistry lies in simplicity and the finest ingredients.
               Established in 1961, our philosophy has always been to serve natural, healthy, and incredibly tasty dishes.
               Dine with us to experience a symphony of flavors, meticulously crafted with heart-felt honesty,
@@ -57,8 +57,10 @@ const AboutSection = React.forwardRef((props, ref) => {
           duration: 0.8,
           delay: 0.2
         }} className="relative">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl">
-              <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Gourmet steak dish with vegetables" src="https://horizons-cdn.hostinger.com/efb71b3a-2834-4462-96d3-39b1a9d0a298/liubov-ilchuk-_qzowg2oaj4-unsplash-19MDs.jpg" />
+            <div className="hear grain relative grid aspect-[4/3] place-items-center overflow-hidden rounded-lg border border-border opacity-90">
+              <span className="font-display px-6 text-center text-4xl text-foreground/80 sm:text-5xl">
+                dal 1961
+              </span>
             </div>
           </motion.div>
         </div>

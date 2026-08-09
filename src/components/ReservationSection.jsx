@@ -64,7 +64,7 @@ const ReservationSection = React.forwardRef((props, ref) => {
   };
 
   return (
-    <section ref={setRefs} className="py-24 bg-[#F5F1EB]">
+    <section ref={setRefs} className="py-24 bg-background">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div initial={{
         opacity: 0,
@@ -75,10 +75,10 @@ const ReservationSection = React.forwardRef((props, ref) => {
       } : {}} transition={{
         duration: 0.8
       }} className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-light text-[#6B5D4F] mb-4">
+          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-4">
             Reserve a Table
           </h2>
-          <p className="text-[#6B5D4F]/70">Enter your details and we'll get you the best seats for an unforgettable evening</p>
+          <p className="text-foreground/70">Enter your details and we'll get you the best seats for an unforgettable evening</p>
         </motion.div>
 
         <motion.form initial={{
@@ -90,17 +90,17 @@ const ReservationSection = React.forwardRef((props, ref) => {
       } : {}} transition={{
         duration: 0.8,
         delay: 0.2
-      }} onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
+      }} onSubmit={handleSubmit} className="bg-card rounded-lg shadow-lg p-8">
           <div className="grid md:grid-cols-3 gap-6 mb-6">
             <div>
-              <Label htmlFor="partySize" className="text-[#6B5D4F] mb-2 block">
+              <Label htmlFor="partySize" className="text-foreground mb-2 block">
                 Party size
               </Label>
               <Select value={formData.partySize} onValueChange={value => setFormData({
               ...formData,
               partySize: value
             })}>
-                <SelectTrigger className="w-full border-[#E8E0D5] focus:border-[#8B7355]">
+                <SelectTrigger className="w-full border-border focus:border-primary">
                   <SelectValue placeholder="2 guests" />
                 </SelectTrigger>
                 <SelectContent>
@@ -112,24 +112,24 @@ const ReservationSection = React.forwardRef((props, ref) => {
             </div>
 
             <div>
-              <Label htmlFor="date" className="text-[#6B5D4F] mb-2 block">
+              <Label htmlFor="date" className="text-foreground mb-2 block">
                 Date
               </Label>
               <input type="date" id="date" value={formData.date} onChange={e => setFormData({
               ...formData,
               date: e.target.value
-            })} min={new Date().toISOString().split('T')[0]} className="w-full px-3 py-2 border border-[#E8E0D5] rounded-md focus:outline-none focus:ring-2 focus:ring-[#8B7355] focus:border-transparent" />
+            })} min={new Date().toISOString().split('T')[0]} className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent" />
             </div>
 
             <div>
-              <Label htmlFor="time" className="text-[#6B5D4F] mb-2 block">
+              <Label htmlFor="time" className="text-foreground mb-2 block">
                 Time
               </Label>
               <Select value={formData.time} onValueChange={value => setFormData({
               ...formData,
               time: value
             })}>
-                <SelectTrigger className="w-full border-[#E8E0D5] focus:border-[#8B7355]">
+                <SelectTrigger className="w-full border-border focus:border-primary">
                   <SelectValue placeholder="8:00 PM" />
                 </SelectTrigger>
                 <SelectContent>
@@ -141,7 +141,7 @@ const ReservationSection = React.forwardRef((props, ref) => {
             </div>
           </div>
 
-          <Button type="submit" className="w-full bg-[#8B7355] hover:bg-[#6B5D4F] text-white py-6 text-lg">
+          <Button type="submit" className="w-full bg-primary hover:bg-secondary text-foreground py-6 text-lg">
             Find a Table
           </Button>
         </motion.form>
