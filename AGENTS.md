@@ -4,6 +4,10 @@
 
 Workspace rules: `x:\crusher-labs\AGENTS.md`. Global rules: `~/.claude/CLAUDE.md`. This file only adds what is specific to this repo.
 
+## Status
+
+**Parked since 2026-10-19** (founder's call in the control review): no host, no active work, nothing scheduled. Redesigned on 2026-08-09/10 as "Hearth"; some descriptions below were written before that redesign, so check the code before trusting them.
+
 ## What it is
 
 - **Stack:** Vite 4 + React 18 SPA (JSX, no TypeScript), client-side routing via React Router 6, styling with Tailwind CSS 3 + Radix UI primitives, animation via Framer Motion, icons via lucide-react. `@/` aliases `./src`.
@@ -29,7 +33,7 @@ No test or lint script is defined. `eslint` is installed but there is no `lint` 
 
 ## What NOT to do
 
-- **Do not commit to `main` carelessly.** There is no `dev` branch yet; if you start real feature work, create `dev` from `main` and work there. Docs-only changes on `main` are fine.
+- **Branches: `dev` is the working branch and `main` is fast-forward only.** Both exist and were equal on 2026-10-19. Never commit to `main` directly, docs included; this workspace lets you merge `dev` into `main` yourself once the gate is green.
 - **No `Co-Authored-By` or AI-attribution trailers** in commits or PRs. User identity only.
 - **Do not put secrets in tracked files.** `.env*` is gitignored; keep credentials out of the repo.
 - Do not commit `dist/` or `node_modules/` (both gitignored).
