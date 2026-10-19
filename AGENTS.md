@@ -6,7 +6,7 @@ Workspace rules: `x:\crusher-labs\AGENTS.md`. Global rules: `~/.claude/CLAUDE.md
 
 ## Status
 
-**Parked since 2026-10-19** (founder's call in the control review): no host, no active work, nothing scheduled. Redesigned on 2026-08-09/10 as "Hearth"; some descriptions below were written before that redesign, so check the code before trusting them.
+**Parked since 2026-10-19**: no host, no active work, nothing scheduled. Redesigned on 2026-08-09/10 as "Hearth"; some descriptions below were written before that redesign, so check the code before trusting them.
 
 ## What it is
 
